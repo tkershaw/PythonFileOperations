@@ -1,0 +1,11 @@
+import os
+import glob
+
+os.getcwd()
+path = 'D:\\HVSR\\Open HVSR\\OpenHVSR-Inversion-master\\Hvolboll\\Model'
+os.chdir(path)
+os.listdir(path)							%list the file sin the directory path
+
+for f in glob.glob('*.txt'):				
+    new_filename = f.replace("HV","HV_")
+    os.rename(f,new_filename)
